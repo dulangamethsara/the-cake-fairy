@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">THE_CAKE_FAIRY</string>
+    <string name="home">Home</string>
+    <string name="btnAddHome">add</string>
+    <string name="Add">Add Cakes</string>
+    <string name="btnUpdateAdd">Update Cake Details</string>
+    <string name="btnAddADD">Add Cake</string>
+    <string name="etCakeNameADDhint">Type Cake Name......</string>
+    <string name="etWeightADDhint">Type Cake Weight......</string>
+    <string name="etCategoryADDhint">Type Cake Category .........</string>
+    <string name="etPriceADD">"Type Cake Price............... "</string>
+    <string name="UR">Update Cakes</string>
+    <string name="etCakeNameURhint">Type Cake Name..........</string>
+    <string name="btnSearchUR">Search</string>
+    <string name="etWeightURhint">Weight</string>
+    <string name="etCategoryURhint">Category</string>
+    <string name="etPriceURhint">Price</string>
+    <string name="btnUpdateUR">Update</string>
+    <string name="btnDeleteUR">Delete</string>
+    <string name="btnUpdateHome">Update Cake Details</string>
+    <string name="btnDeleteHome">"Delete Cake "</string>
+    <string name="etCakeList">Cakes</string>
+    <string name="addNameHint">Cake Name ....</string>
+    <string name="btnSearchCakelist">Search</string>
+    <string name="btnCakeListHome">Available List</string>
+    <string name="Delete">Delete Cakes</string>
+
+</resources>
