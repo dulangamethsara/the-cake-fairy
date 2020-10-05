@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="home">home</string>
+    <string name="cart">cart</string>
+    <string name="price">price</string>
+    <string name="name">name</string>
+    <string name="BuyNow">Buy Now</string>
+    <string name="AddtoCart">Add to Cart</string>
+    <string name="discription">discription</string>
+    <string name="itemname">ItemName</string>
+    <string name="weight">Weight</string>
+    <string name="remove">Remove</string>
+</resources>
