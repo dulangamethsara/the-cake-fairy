@@ -242,8 +242,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="74dp"
-        android:layout_height="53dp"
+        android:layout_width="81dp"
+        android:layout_height="49dp"
         android:autoText="false"
         android:background="@color/s"
         android:text="@string/cart"
