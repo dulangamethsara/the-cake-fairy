@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by ProgrammingKnowledge on 4/3/2015.
+ * dell Mad_love.
  */
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class DatabaseHelper extends SQLiteOpenHelper {//parent class sqlite(1)
     public static final String DATABASE_NAME = "Payment.db";
     public static final String TABLE_NAME = "Payment_table";
     public static final String COL_1 = "ID";
@@ -16,11 +16,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_3 = "ADDRESS";
     public static final String COL_4 = "PHONENO";
 
-    public DatabaseHelper(Context context) {
+    public DatabaseHelper(Context context)//constructor(2)
+    {
         super(context, DATABASE_NAME, null, 1);
     }
 
-    @Override
+    @Override//(3)two methods//to ceate the table in the database(4)
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,ADDRESS TEXT,PHONENO INTEGER)");
     }
