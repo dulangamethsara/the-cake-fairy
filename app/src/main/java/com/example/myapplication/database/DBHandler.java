@@ -46,6 +46,8 @@ public class DBHandler extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS " + userRegistration.Users.TABLE_NAME;
 
 
+
+
     public long addInfo (String uName,String phone,String email,String password){
         // Gets the data repository in write mode
         SQLiteDatabase db = getWritableDatabase();
@@ -66,17 +68,17 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
 
-    public Boolean addInfo (String fName, String lName, String phone, String email, String password,){
+    public Boolean updateInfo (String uName, String phone, String email , String password){
         SQLiteDatabase db = getWritableDatabase();
 
-// New value for one column
+        // New value for one column
         ContentValues values = new ContentValues();
-        values.put(userProfile.Users.COLUMN_1, fName);
-        values.put(userProfile.Users.COLUMN_2, lName);
-        values.put(userProfile.Users.COLUMN_3, phone);
-        values.put(userProfile.Users.COLUMN_5, password);
+        values.put(userProfile.Users.COLUMN_1, uName);
+        values.put(userProfile.Users.COLUMN_2, uName);
+        values.put(userProfile.Users.COLUMN_3, uName);
+        values.put(userProfile.Users.COLUMN_4, uName);
 
-// Which row to update, based on the title
+        // Which row to update, based on the title
         String selection = userProfile.Users.COLUMN_1 + " LIKE ?";
         String[] selectionArgs = { "MyOldTitle" };
 
@@ -94,6 +96,9 @@ public class DBHandler extends SQLiteOpenHelper {
         }
     }
 
+
+
+
     public void deleteInfo(String email){
         SQLiteDatabase db = getWritableDatabase();
         // Define 'where' part of query.
@@ -106,7 +111,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
 
 
-    public List readAllInfo (String email){
+    public List ReadAllInfo (){
 
         SQLiteDatabase db = getReadableDatabase();
 
@@ -143,7 +148,7 @@ public class DBHandler extends SQLiteOpenHelper {
         while(cursor.moveToNext()) {
             String uName = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_1));
             String phone = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_2));
-            String Email = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_3));
+            String email = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_3));
             String password = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_4));
             String Cpassword = cursor.getString(cursor.getColumnIndexOrThrow(userRegistration.Users.COLUMN_5));
             userInfo.add(uName);
@@ -156,7 +161,7 @@ public class DBHandler extends SQLiteOpenHelper {
         return userInfo;
     }
 
-    public List readAllInfo (String uName){
+    public List ReadAllInfo (String uName){
 
         SQLiteDatabase db = getReadableDatabase();
 
